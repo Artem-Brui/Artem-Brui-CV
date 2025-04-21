@@ -1,0 +1,65 @@
+@use './mixins' as mixin;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html,
+body,
+header,
+section,
+footer,
+h1,
+h2,
+h3,
+h4,
+div,
+p,
+ul,
+i,
+li,
+form,
+label,
+input,
+textarea,
+svg,
+img,
+span,
+button {
+  will-change: opacity, background-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 
+    background-color 300ms linear,
+    opacity 300ms linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  padding-block: 40px;
+
+  & > div:first-child {
+    max-width: 1100px;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+@include mixin.OnLarge {
+  section {
+    & > div:first-child {
+      max-width: 1800px;
+    }
+  }
+}

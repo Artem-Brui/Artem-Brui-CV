@@ -1,0 +1,36 @@
+
+
+.list__item {
+  margin-inline: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  position: absolute;
+  transform-origin: center;
+  transition: none;
+} 
+
+.logo {
+  width: 75%;
+  aspect-ratio: 10 / 9;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.highlighted {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.dark {
+  background-color: $Grey;
+}
+
+.light {
+  background-color: #c0d1df;
+}
+

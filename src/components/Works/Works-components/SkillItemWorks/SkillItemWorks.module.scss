@@ -1,0 +1,33 @@
+
+.skills_item {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 3px;
+}
+
+.skill_name {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+@include OnTablet {
+  .skill_name {
+    font-size: $tablet-font-size - 5px;
+  }
+}
+
+@include OnDesktop {
+  .skill_name {
+    font-size: $desktop-font-size - 5px;
+  }
+}
+
+@include OnLarge {
+  .skill_name {
+    font-size: $large-font-size - 5px;
+  }
+}

@@ -1,0 +1,18 @@
+.logo_container {
+  & > p {
+    font-size: $mobile-font-size + 20px;
+    line-height: $mobile-line-height + 15px;;
+  }
+}
+
+@include OnDesktop {
+  .logo_container {
+    & > p {
+      font-size: $desktop-font-size + 25px;
+      line-height: $desktop-line-height + 19px;
+    }
+  }
+}
+@include OnLarge {
+
+}

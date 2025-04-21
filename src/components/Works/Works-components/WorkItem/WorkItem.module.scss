@@ -1,0 +1,133 @@
+.work__item {
+  padding: 30px 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba($Brand-1, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.card_container {
+  width: 100%;
+}
+
+.work__item__dark {
+  background-color: rgba($Brand-1, 0.1);
+}
+
+.work__item__light {
+  background-color: rgba($Brand-1, 0.3);
+}
+
+.title {
+  font-weight: 500;
+  font-size: calc($mobile-font-size + 5px);
+  line-height: calc($mobile-line-height + 5px);
+  margin-bottom: 9px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.date {
+  margin-bottom: 15px;
+  font-size: calc($mobile-font-size - 2px);
+  line-height: calc($mobile-line-height - 2px);
+  text-align: center;
+}
+
+.item__image {
+  position: relative;
+}
+
+.computer {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.preview_container {
+  width: 53%;
+  height: 47%;
+  overflow: hidden;
+  position: absolute;
+  top: 21.8%;
+  right: 2.5%;
+  z-index: 1;
+}
+
+.preview {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: calc($mobile-font-size + 2px);
+  line-height: calc($mobile-line-height);
+  text-align: center;
+  padding: 3% 8%;
+  border-radius: 8px;
+  color: inherit;
+  background-color: $Brand-1;
+
+  &:hover {
+    background-color: #2876b6;
+  }
+
+  &:active {
+    scale: 0.95;
+  }
+}
+
+@include OnTablet {
+  .date {
+    font-size: calc($tablet-font-size - 2px);
+    line-height: calc($tablet-line-height);
+  }
+
+  .link {
+    font-size: calc($tablet-font-size + 2px);
+    line-height: calc($tablet-line-height);
+    padding: 2% 6%;
+  }
+}
+
+@include OnDesktop {
+  .date {
+    font-size: calc($desktop-font-size - 2px);
+    line-height: calc($desktop-line-height);
+  }
+
+  .title {
+    font-size: calc($desktop-font-size + 12px);
+    line-height: calc($desktop-line-height + 12px);
+  }
+
+  .link {
+    font-size: calc($desktop-font-size + 7px);
+    line-height: calc($desktop-line-height);
+    padding: 3% 8%;
+  }
+}
+
+@include OnLarge {
+  .date {
+    font-size: calc($large-font-size - 2px);
+    line-height: calc($large-line-height);
+  }
+
+  .title {
+    font-size: calc($large-font-size + 12px);
+    line-height: calc($large-line-height + 12px);
+  }
+
+  .link {
+    font-size: calc($large-font-size + 7px);
+    line-height: calc($large-line-height);
+    padding: 3% 8%;
+  }
+}

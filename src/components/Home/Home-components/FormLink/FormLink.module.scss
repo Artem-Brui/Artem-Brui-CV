@@ -1,0 +1,29 @@
+.form_link {
+  @include H2-M;
+
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+@include OnTablet {
+  .form_link {
+    font-size: calc($tablet-font-size + 10px);
+    line-height: calc($tablet-line-height + 25px);
+  }
+}
+
+@include OnDesktop {
+  .form_link {
+    font-size: calc($desktop-font-size + 15px);
+    line-height: calc($desktop-line-height + 24px);
+  }
+}
+
+@include OnLarge {
+  .form_link {
+    font-size: calc($large-font-size + 15px);
+    line-height: calc($large-line-height + 27px);
+  }
+}

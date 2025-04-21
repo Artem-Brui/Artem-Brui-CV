@@ -1,0 +1,59 @@
+
+// #region =========Colors=========
+$BG-1: #292F36;
+$BG-2: #1A1E23;
+$Brand-1: #569cd6;
+$Brand-2: #98FAEC;
+$Grey: #43454D;
+$White: #ffffff;
+$Html: #E54F26;
+$CSS: #0C73B8;
+$JS: #E7A020;
+$JS: #f9f90b;
+$React: #28A9E0;
+$light-theme: $White;
+$dark-theme: $BG-1;
+
+//dark - #292F36
+//light - #fff
+//brand - #569cd6
+
+//===light theme
+$font-color-light: $dark-theme;
+$background-color-light: $light-theme;
+
+//===dark theme
+$font-color-dark: $light-theme;
+$background-color-dark: $dark-theme;
+
+// #endregion =========Colors=========
+
+// #region =========Fonts=========
+$font-family-ubuntu: 'Ubuntu', sans-serif;
+$font-family-ibm-plex-mono: 'IBM Plex Mono', monospace;
+
+
+$mobile-font-size: 16px;
+$tablet-font-size: 18px;
+$desktop-font-size: 20px;
+$large-font-size: 20px;
+
+$mobile-line-height: 19px;
+$tablet-line-height: 23px;
+$desktop-line-height: 25px;
+$large-line-height: 25px;
+// #endregion =========Fonts=========
+
+// #region =========MARGINS=========
+$margin-inline-mobile: 24px;
+$margin-inline-tablet: 45px;
+$margin-inline-desktop: 128px;
+$margin-inline-large: 128px;
+
+// #endregion =========MARGINS=========
+
+// #region =========OTHERS=========
+
+
+
+// #endregion =========OTHERS=========

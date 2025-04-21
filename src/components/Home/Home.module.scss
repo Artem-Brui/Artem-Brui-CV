@@ -1,0 +1,39 @@
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+.section_container {
+  width: 100%;
+  display: grid;
+  grid-gap: 30px;
+}
+
+.dark {
+  background-color: $BG-1;
+  border-color: $BG-1;
+}
+
+.light {
+  background-color: $White;
+  border-color: $White;
+}
+
+@include OnTablet {
+  .section_container {
+    grid-gap: 10px;
+  }
+}
+
+@include OnDesktop {
+  .section_container {
+    grid-gap: 50px;
+    margin-block: 40px;
+  }
+}
+
+@include OnLarge {
+  .section_container {
+    margin-block: 80px;
+  }
+}

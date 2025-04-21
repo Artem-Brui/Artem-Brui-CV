@@ -1,0 +1,96 @@
+.counter {
+  grid-area: 4 / 1 / 5 / 4;
+  justify-self: start;
+  width: 250px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  border-radius: 80px;
+
+  &_item {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.counter_number {
+  width: 65px;
+  color: $Brand-1;
+  text-align: right;
+  font-size: calc($mobile-font-size + 30px);
+  line-height: calc($mobile-line-height + 17px);
+}
+
+.counter_text {
+  width: 110px;
+}
+
+.font_dark {
+  color: $font-color-dark;
+}
+
+.font_light {
+  color: $font-color-light;
+}
+
+.container_dark {
+  background-color: $BG-2;
+}
+
+.container_light {
+  background-color: rgba($Brand-1, 0.2);
+}
+
+@include OnMobile {
+  .counter {
+    justify-self: center;
+  }
+}
+
+@include OnTablet {
+  .counter {
+    width: 280px;
+    grid-area: 2 / 3 / 3 / 4;
+    align-self: self-end;
+  }
+
+  .counter_number {
+    width: 60px;
+    font-size: calc($tablet-font-size + 30px);
+    line-height: calc($tablet-line-height + 25px);
+  }
+}
+
+@include OnDesktop {
+  .counter {
+    grid-area: 2 / 3 / 3 / 4;
+    align-self: center;
+    width: 310px;
+    height: 430px;
+
+    &_item {
+      gap: 13px;
+    }
+  }
+}
+
+@include OnLarge {
+  .counter {
+    grid-area: 1 / 3 / 3 / 4;
+    align-self: center;
+    width: 350px;
+    height: 500px;
+
+    &_item {
+      gap: 26px;
+    }
+  }
+
+  .counter_number {
+    font-size: calc($large-font-size + 34px);
+    line-height: calc($large-line-height + 29px);
+  }
+}

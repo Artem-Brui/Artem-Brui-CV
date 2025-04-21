@@ -1,0 +1,22 @@
+.socLinks {
+  display: flex;
+  gap: 18px;
+}
+
+@include OnTablet {
+  .socLinks {
+    gap: 20px;
+  }
+}
+
+@include OnDesktop {
+  .socLinks {
+    gap: 24px;
+  }
+}
+
+@include OnLarge {
+  .socLinks {
+    gap: 30px;
+  }
+}

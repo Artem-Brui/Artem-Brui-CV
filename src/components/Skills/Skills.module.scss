@@ -1,0 +1,53 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+
+  & h2 {
+    width: max-content;
+  }  
+}
+
+.skills::after {
+  content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/background_code.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 7% 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .1;
+}
+
+.dark {
+  background-color: $BG-1;
+}
+
+.light {
+  background-color: $White;
+}
+
+
+@include OnTablet {
+  .skills  {
+    & > div:first-of-type > p {
+      margin: 0;
+    }
+  }
+}
+
+@include OnDesktop {
+  .skills  {
+    & > div:first-of-type > p {
+      margin: 0;
+    }
+  }
+}
+

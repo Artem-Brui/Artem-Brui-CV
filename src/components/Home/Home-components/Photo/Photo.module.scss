@@ -1,0 +1,53 @@
+.container {
+  grid-area: 1 / 1 / 2 / 4;
+  justify-self: end;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.myPhoto {
+  object-fit: 105%;
+  width: 80%;
+  max-width: 300px;
+  max-height: 420px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 40% 0;
+  box-shadow: -5px -5px 10px $Brand-1;
+}
+
+@include OnMobile {
+  .container {
+    justify-self: center;
+  }
+}
+
+@include OnTablet {
+  .container {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+@include OnDesktop {
+  .container {
+    width: 400px;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .myPhoto {
+    width: 100%;
+  }
+}
+
+@include OnLarge {
+  .container {
+    grid-area: 1 / 1 / 3 / 2;
+  }
+
+  .myPhoto {
+    width: 100%;
+    max-width: 350px;
+    max-height: 660px;
+  }
+}

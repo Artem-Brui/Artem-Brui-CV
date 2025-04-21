@@ -1,0 +1,53 @@
+.language_list {
+  width: 85%;
+  padding-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+}
+
+.language_item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.language_title {
+  font-size: $mobile-font-size;
+  text-transform: uppercase;
+}
+
+.hiden {
+  display: none;
+}
+
+@include OnTablet {
+  .language_list {
+    gap: 15px;
+  }
+  .language_title {
+    font-size: $tablet-font-size - 3px;
+  }
+}
+
+@include OnDesktop {
+  .language_list {
+    gap: 15px;
+  }
+  .language_title {
+    font-size: $desktop-font-size - 5px;
+  }
+}
+
+@include OnLarge {
+  .language_list {
+    gap: 15px;
+  }
+  .language_title {
+    font-size: $desktop-font-size - 3px;
+  }
+}

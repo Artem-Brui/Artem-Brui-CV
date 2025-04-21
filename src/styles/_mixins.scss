@@ -1,0 +1,168 @@
+@use "./_variables.scss" as st;
+
+// #region =========Ubuntu Font=========
+@mixin BG-Text-U {
+  font-family: st.$font-family-ubuntu;
+  font-size: 117px;
+  line-height: 134px;
+  font-weight: 400;
+}
+
+@mixin H1-U {
+  font-family: st.$font-family-ubuntu;
+  font-size: 64px;
+  line-height: 72px;
+  font-weight: 400;
+}
+
+@mixin H2-U {
+  font-family: st.$font-family-ubuntu;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+@mixin Button-U {
+  font-family: st.$font-family-ubuntu;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin Article-U {
+  font-family: st.$font-family-ubuntu;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 100;
+}
+
+@mixin Para-U {
+  font-family: st.$font-family-ubuntu;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 100;
+}
+
+@mixin Label-U-M {
+  font-family: st.$font-family-ubuntu;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+@mixin Label-U-L {
+  font-family: st.$font-family-ubuntu;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 100;
+}
+
+// #endregion =========Ubuntu Font=========
+
+// #region =========IBM Plex Mono Font=========
+@mixin Number-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 500;
+}
+
+@mixin H2-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+@mixin Logo-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 500;
+}
+
+@mixin Menu-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+@mixin Media-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin Para-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@mixin Code-M {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+// #endregion  =========IBM Plex Mono Font=========
+
+// #region =========RESPONSIVE=========
+
+@mixin OnMobile {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin OnTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin OnDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin OnLarge {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+// #endregion =========RESPONSIVE=========
+
+// #region =========FONTS=========
+
+@mixin MobileFont {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: st.$mobile-font-size;
+  line-height: st.$mobile-line-height;
+}
+
+@mixin TabletFont {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: st.$tablet-font-size;
+  line-height: st.$tablet-line-height;
+}
+
+@mixin DesktopFont {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: st.$desktop-font-size;
+  line-height: st.$desktop-line-height;
+}
+
+@mixin LargeFont {
+  font-family: st.$font-family-ibm-plex-mono;
+  font-size: st.$large-font-size;
+  line-height: st.$large-line-height;
+}
+
+// #region =========FONTS=========

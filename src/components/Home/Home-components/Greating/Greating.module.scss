@@ -1,0 +1,61 @@
+.greating {
+  grid-area: 2 / 1 / 3 / 4;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text__container {
+  display: grid;
+  gap: 5px;
+  margin-left: 24px;
+}
+
+.greating_text {
+  font-size: 23px;
+  line-height: 25px;
+  font-weight: 700;
+
+  & span {
+    color: $Brand-1;
+  }
+}
+
+@include OnTablet {
+  .greating {
+    grid-area: 1 / 2 / 2 / 4;
+    justify-self: center;
+  }
+
+  .greating_text {
+    font-size: calc($tablet-font-size + 12px);
+    line-height: calc($tablet-line-height + 17px);
+    font-weight: 500;
+  }
+}
+
+@include OnDesktop {
+  .greating {
+    grid-area: 1 / 2 / 2 / 4;
+  }
+
+  .greating_text {
+    font-size: calc($desktop-font-size + 17px);
+    line-height: calc($desktop-line-height + 30px);
+    font-weight: 600;
+  }
+}
+
+@include OnLarge {
+  .greating {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: start;
+  }
+
+  .greating_text {
+    font-size: calc($large-font-size + 17px);
+    line-height: calc($large-line-height + 30px);
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,52 @@
+.button {
+  position: absolute;
+  top: 320px;
+  outline: none;
+  border: none;
+  width: 35px;
+  height: 90px;
+  background-color: rgba($Brand-1, 0.2);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #2876b6;
+  }
+}
+
+.button_left {
+  left: -22px;
+  scale: (-1);
+
+  &:active {
+    scale: (-0.95);
+  }
+}
+
+.button_right {
+  right: -22px;
+
+  &:active {
+    scale: 0.95;
+  }
+}
+
+@include OnTablet {
+  .button_left {
+    left: -52px;
+  }
+  
+  .button_right {
+    right: -52px;
+  }
+}
+
+@include OnDesktop {
+
+}
+
+@include OnLarge {
+
+}
