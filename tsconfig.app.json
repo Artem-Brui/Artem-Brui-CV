@@ -27,8 +27,8 @@
       "@components/*": ["components/*"],
       "@customHooks/*": ["customHooks/*"],
       "@content/*": ["content/*"],
-      "@contexts/*": ["sontexts/*"],
-      "@images/*": ["images/*"],
+      "@contexts/*": ["сontexts/*"],
+      "@images/*": ["assets/images/*"],
       "@icons/*": ["icons/*"],
     }
   },
