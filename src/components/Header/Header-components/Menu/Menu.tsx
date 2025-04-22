@@ -2,11 +2,12 @@ import useTheme from "@customHooks/useTheme";
 import getResponsiveIconSize from "../SocLinks/service";
 import cl from "./Menu.module.scss";
 import { BurgerMenu } from "@components/SVGs/Icons";
-import { Link } from "react-scroll";
 import useLanguage from "@customHooks/useLanguage";
 import useWindowWidth from "@customHooks/useWindowScreen";
 import classNames from "classnames";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { ContentType } from "@content/types";
 
 const Menu = () => {
   const isDesktop = useWindowWidth().windowWidth > 1279;
@@ -15,6 +16,10 @@ const Menu = () => {
   const { content } = useLanguage();
   const [isMobMenuVisible, setIsMobMenuVisible] = useState(false);
 
+  const navLinksList = (Object.keys(content) as (keyof ContentType)[]).filter(
+    (link) => link !== "Header" && link !== "Footer"
+  );
+
   const iconColor = theme === "dark" ? colorLight : colorDark;
   const iconSize = getResponsiveIconSize(1.5);
 
@@ -22,7 +27,7 @@ const Menu = () => {
     if (!isDesktop) {
       setIsMobMenuVisible(!isMobMenuVisible);
     }
-  }
+  };
 
   return (
     <nav
@@ -45,71 +50,22 @@ const Menu = () => {
           [cl[theme]]: isMobMenuVisible,
         })}
       >
-        <Link
-          className={cl.nav_item}
-          to="home"
-          smooth={true}
-          duration={1000}
-          offset={-80}
-          onClick={handleNavItemClick}
-        >
-          <p>{content.HomeSection.sectionName}</p>
-        </Link>
+        {navLinksList.map((link) => {
+          const isHome = link === "HomeSection";
+          const toLink = isHome ? "/" : link.split("Section")[0].toLowerCase();
 
-        <Link
-          className={cl.nav_item}
-          to="about"
-          smooth={true}
-          duration={1000}
-          offset={-80}
-          onClick={handleNavItemClick}
-        >
-          <p>{content.AboutSection.sectionName}</p>
-        </Link>
-
-        <Link
-          className={cl.nav_item}
-          to="skills"
-          smooth={true}
-          duration={1000}
-          offset={-80}
-          onClick={handleNavItemClick}
-        >
-          {content.SkillsSection.sectionName}
-        </Link>
-
-        <Link
-          className={cl.nav_item}
-          to="works"
-          smooth={true}
-          duration={1000}
-          offset={-80}
-          onClick={handleNavItemClick}
-        >
-          {content.WorksSection.sectionName}
-        </Link>
-
-        <Link
-          className={cl.nav_item}
-          to="experience"
-          smooth={true}
-          duration={1000}
-          offset={-80}
-          onClick={handleNavItemClick}
-        >
-          {content.ExperienceSection.sectionName}
-        </Link>
-
-        <Link
-          className={cl.nav_item}
-          to="contact"
-          smooth={true}
-          duration={1000}
-          offset={-80}
-          onClick={handleNavItemClick}
-        >
-          {content.ContactSection.sectionName}
-        </Link>
+          return (
+            <NavLink
+              className={({isActive}) =>
+                classNames(cl.nav_item, { [cl.nav_active]: isActive })
+              }
+              to={toLink}
+              onClick={handleNavItemClick}
+            >
+              {content[link].sectionName}
+            </NavLink>
+          );
+        })}
       </ul>
     </nav>
   );

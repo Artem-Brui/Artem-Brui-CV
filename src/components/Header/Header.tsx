@@ -2,7 +2,6 @@ import classNames from "classnames";
 import cl from "./Header.module.scss";
 import useTheme from "@customHooks/useTheme";
 import Logo from "./Header-components/Logo";
-import SocLinks from "./Header-components/SocLinks/SocLinks";
 import Menu from "./Header-components/Menu/Menu";
 import Switchers from "./Header-components/Switchers";
 
@@ -15,7 +14,6 @@ const Header = () => {
         <Switchers />
         <div className={cl.header}>
           <Logo />
-          <SocLinks />
           <Menu />
         </div>
       </div>

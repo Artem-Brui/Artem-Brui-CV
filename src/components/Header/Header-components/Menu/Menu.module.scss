@@ -52,6 +52,11 @@
 
 .nav_item {
   cursor: pointer;
+  color: inherit;
+}
+
+.nav_active {
+ color: $Brand-1;
 }
 
 .hiden {
