@@ -5,15 +5,22 @@ type Arguments = [
   toglerInitialX: number,
   toglerWidth: number,
   setToogleTransform: (value: number) => void,
-  setIsMoving: (value: boolean) => void,
-]
+  setIsMoving: (value: boolean) => void
+];
 
 const useToogleEvents = (...argumentsList: Arguments) => {
-  const [isMoving, toglerInitialX, toglerWidth, setToogleTransform, setIsMoving] = argumentsList;
+  const [
+    isMoving,
+    toglerInitialX,
+    toglerWidth,
+    setToogleTransform,
+    setIsMoving,
+  ] = argumentsList;
 
   useEffect(() => {
     const handleGlobalMove = (event: MouseEvent | TouchEvent) => {
       if (isMoving) {
+        console.log("Preventing default action");
         event.preventDefault();
 
         let newTransform = 0;
@@ -29,7 +36,7 @@ const useToogleEvents = (...argumentsList: Arguments) => {
             toglerWidth
           );
         }
-        
+
         setToogleTransform(newTransform);
       }
     };
@@ -42,7 +49,7 @@ const useToogleEvents = (...argumentsList: Arguments) => {
 
     window.addEventListener("mousemove", handleGlobalMove);
     window.addEventListener("mouseup", handleGlobalEnd);
-    window.addEventListener("touchmove", handleGlobalMove);
+    window.addEventListener("touchmove", handleGlobalMove, { passive: false });
     window.addEventListener("touchend", handleGlobalEnd);
 
     return () => {
@@ -52,6 +59,6 @@ const useToogleEvents = (...argumentsList: Arguments) => {
       window.removeEventListener("touchend", handleGlobalEnd);
     };
   }, [isMoving, toglerInitialX, toglerWidth, setToogleTransform, setIsMoving]);
-} 
+};
 
 export default useToogleEvents;

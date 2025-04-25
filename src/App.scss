@@ -1,4 +1,12 @@
 .page {
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+
+  & section {
+   flex: 1;
+  }
+
   & > * > * {
     margin-inline: $margin-inline-mobile;
   }

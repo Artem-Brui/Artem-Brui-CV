@@ -457,11 +457,11 @@ const Socket: React.FC<PropsIcons> = ({ width, height, color }) => {
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       ></g>
       <g id="SVGRepo_iconCarrier">
         {" "}
@@ -707,7 +707,7 @@ const PlFlag: React.FC<PropsIcons> = ({ width, height }) => {
           rx="1.75"
           fill="white"
           stroke="#F5F5F5"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <mask
           id="mask0_503_4159"
@@ -725,7 +725,7 @@ const PlFlag: React.FC<PropsIcons> = ({ width, height }) => {
             rx="1.75"
             fill="white"
             stroke="white"
-            stroke-width="0.5"
+            strokeWidth="0.5"
           />
         </mask>
         <g mask="url(#mask0_503_4159)">

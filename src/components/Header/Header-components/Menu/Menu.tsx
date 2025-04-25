@@ -60,7 +60,8 @@ const Menu = () => {
                 classNames(cl.nav_item, { [cl.nav_active]: isActive })
               }
               to={toLink}
-              onClick={handleNavItemClick}
+            onClick={handleNavItemClick}
+              key={link}
             >
               {content[link].sectionName}
             </NavLink>
